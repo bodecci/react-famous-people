@@ -10,11 +10,18 @@ class FamousPerson extends Component {
         };
     }
 
-    handleChange = (event) => {
+    changeName = (event) => {
         console.log(event.target.value);
 
         this.setState({
-            famousName: event.target.value,
+            famousName: event.target.value
+        });
+    }
+
+    changeRole = (event) => {
+        console.log(event.target.value);
+
+        this.setState({
             famousRole: event.target.value
         });
     }
@@ -22,10 +29,10 @@ class FamousPerson extends Component {
     render(){
         return (
             <div>
-                <input onChange = {this.handleChange} type="text"
+                <input onChange = {this.changeName} type="text"
                 placeholder="Actor Name" />
 
-                <input onChange = {this.handleChange} type="text"
+                <input onChange = {this.changeRole} type="text"
                 placeholder="Actor's Role" />
                 <br />
 
