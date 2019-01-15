@@ -26,6 +26,16 @@ class FamousPerson extends Component {
         });
     }
 
+    submitPerson = (event) => {
+        console.log(this.state.famousName + ' is famous for ' + this.state.famousRole);
+
+        
+
+        // this.setState({
+        //     famousRole: event.target.value
+        // });
+    }
+
     render(){
         return (
             <div>
@@ -37,6 +47,7 @@ class FamousPerson extends Component {
                 <br />
 
                 <p>{this.state.famousName} is famous for  {this.state.famousRole}</p>
+                <button onClick={this.submitPerson} className="submit">Submit</button>
             </div>
         );
     }
